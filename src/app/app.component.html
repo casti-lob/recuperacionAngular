@@ -1,2 +1,28 @@
-<app-barra></app-barra>
+<!--<app-barra></app-barra>
 <app-tarea [minioms]="minioms"></app-tarea>
+-->
+
+<!--
+    <span>Valor Numero</span>
+    <input [(ngModel)]="initialValue" type="number" ><br>
+    <span>Valor Incremento</span>
+    <input [(ngModel)]="increment" type="number" ><br>
+
+   
+
+<app-contador [initialValue]="initialValue" [increment]="increment" (total)="totalEvent($event)"></app-contador>
+
+<br> Total por OutPut : {{result}}
+-->    
+<!--
+<span>Nombre</span>
+<input  type="text" required [(ngModel)]="newUser"><br>
+<span>Contraseña</span>
+<input type="password" required [(ngModel)]="password"><br>
+
+<app-registro [user]="newUser" [pass]="password" (submitName)="showName($event)" (submitPassword)="showPassword($event)"></app-registro>
+<br>
+El usuario {{newUser}} y contraseña {{password}}
+-->
+<app-filtro (filtrar)="filtrar($event)"></app-filtro>
+<app-tabla [empleados]="empleados"></app-tabla>

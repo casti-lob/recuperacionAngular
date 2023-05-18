@@ -8,7 +8,10 @@ import { Component } from '@angular/core';
 
 export class AppComponent {
   title = 'primerProyecto';
-
+  initialValue:number =0;
+  increment:number =1;
+  result:number=0;
+  
   minioms =[
     {
       name: "Kevin",
@@ -67,5 +70,56 @@ export class AppComponent {
       side: "malvado"
     }
 ];
+
+empleados=[
+  {
+    "nombre": "John",
+    "apellido": "Doe",
+    "cargo": "Desarrollador",
+    "departamento": "Tecnología"
+  },
+  {
+    "nombre": "Jane",
+    "apellido": "Smith",
+    "cargo": "Diseñadora",
+    "departamento": "Diseño"
+  },
+  {
+    "nombre": "Robert",
+    "apellido": "Johnson",
+    "cargo": "Gerente de Proyecto",
+    "departamento": "Administración"
+  },
+  {
+    "nombre": "Emily",
+    "apellido": "Davis",
+    "cargo": "Analista de Datos",
+    "departamento": "Tecnología"
+  }
+]
+newUser:String ="";
+password:String="";
+
+totalEvent(newTotal:any){
+  this.result=newTotal;
+}
+showName(ne:any){
+  console.log(ne)
+  console.log(`El usuario: ${ne}`)
+}
+showPassword(pass:any){
+  console.log(`Contraseña: ${pass}`)
+}
+
+empleadosBase = this.empleados
+
+filtrar(filtro:String){
+  
+  this.empleados=this.empleadosBase
+  this.empleados = this.empleados.filter(empleado =>{
+    return empleado.nombre.toLowerCase()==filtro.toLowerCase()
+  })
+}
+
 }
 
