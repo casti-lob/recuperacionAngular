@@ -7,7 +7,9 @@ import { Component, Input, OnInit } from '@angular/core';
 export class TareaComponent implements OnInit {
   @Input() minioms:any;
   constructor() {}
-
+  m(){
+    console.log(this.minioms)
+  }
   
 
 

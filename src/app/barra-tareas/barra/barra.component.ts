@@ -5,15 +5,17 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
   templateUrl: './barra.component.html'
 })
 export class BarraComponent implements OnInit {
-  @Output() search:EventEmitter<string> = new EventEmitter();
+  filtro:String="";
+  @Output() search= new EventEmitter<String>();
   constructor() {
 
     
    }
-   nombre:String='';
+  
   ngOnInit(): void {
   }
   busqueda(){
-    console.log(this.nombre)
+   
+  this.search.emit(this.filtro)
   }
 }

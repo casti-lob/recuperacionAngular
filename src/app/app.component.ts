@@ -11,7 +11,7 @@ export class AppComponent {
   initialValue:number =0;
   increment:number =1;
   result:number=0;
-  
+ 
   minioms =[
     {
       name: "Kevin",
@@ -70,6 +70,19 @@ export class AppComponent {
       side: "malvado"
     }
 ];
+
+
+ /*Ejercicio Minions */
+
+minionsBase = this.minioms;
+  search(filtro:String){
+    
+    this.minioms= this.minionsBase
+    this.minioms=this.minioms.filter(miniom=>{
+      return miniom.name.toLowerCase()== filtro.toLowerCase();
+    })
+  }
+ /*Ejercicio Minions */
 
 empleados=[
   {

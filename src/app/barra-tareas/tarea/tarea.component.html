@@ -1,6 +1,7 @@
 
 
 <div class="row row-cols-1 row-cols-sm-3 g-4">
+  <h1 *ngIf="minioms.length==0" style="color: red;">No hay resultados</h1>
     <div *ngFor="let minion of minioms" class="col">
       <div  class="card">
         <img src="{{minion.img}}" class="card-img-top" alt="...">

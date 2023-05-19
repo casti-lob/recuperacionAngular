@@ -6,6 +6,7 @@ import { FormsModule } from '@angular/forms';
 
 
 
+
 @NgModule({
   declarations: [
     BarraComponent,
@@ -15,7 +16,8 @@ import { FormsModule } from '@angular/forms';
   
   imports: [
     CommonModule,
-    FormsModule
+    FormsModule,
+
   ],
   exports: [
     BarraComponent,
